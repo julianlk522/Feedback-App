@@ -25,20 +25,17 @@ import PropTypes from 'prop-types'   //  impt snippet
         
 // all properties which normally use a - use camelCase instead
 
+// alternatively, using a variable the inline declaration only requires one set of braces:
+
+
 
 function Header({ text, bgColor, textColor }) {
     const headerStyles = {
-        backgroundColor: bgColor,
-        color: textColor
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        color: '#ff6a95',
+        text: 'Feedback UI'
     }
 
-
-    Header.defaultProps = {
-        text: 'Feedback UI',
-        bgColor: 'rgba(0,0,0,0.4)',
-        textColor: '#ff6a95'
-
-    }
     
     Header.propTypes = {
         text: PropTypes.string
@@ -48,21 +45,12 @@ function Header({ text, bgColor, textColor }) {
     return (
         <header style ={headerStyles}>
             <div className='container'>
-                <h2>Feeback UI</h2>
+                <h2>Feedback UI</h2>
             </div>
         </header>
     )
 
 }
 
-
-// alternatively, using a variable the inline declaration only requires one set of braces:
-
-/* const headerStyles = { backgroundColor: 'blue',
-color: 'red'
-}
-
-<header style ={headerStyles}>
-*/
 
 export default Header
