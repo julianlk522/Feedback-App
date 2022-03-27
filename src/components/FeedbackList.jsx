@@ -1,5 +1,7 @@
 import React from 'react'
+//components
 import Feedbackitem from './Feedbackitem'
+//prop-types
 import PropTypes from 'prop-types'
 
 function FeedbackList({ feedback, handleDelete }) {
@@ -16,7 +18,7 @@ function FeedbackList({ feedback, handleDelete }) {
             handleDelete={handleDelete}/>
         ))}
     </div>
-  )
+    )
 }
 
 
